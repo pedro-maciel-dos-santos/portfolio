@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+@media(max-width: 1024px) {
+    /* Slider */
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-item {
+        height: auto;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 32px;
+    }
+
+    /* Footer */
+
+    #form-btn {
+        width: 50%;
+    }
+
+    
+}
+
+@media(max-width: 768px) {
+    /* Gerais */
+
+    .container {
+        padding: 20px 0;
+    }
+
+    /* Slider */
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-item {
+        height: auto;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 28px;
+    }
+
+    #mainSlider .carousel-caption p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+    }
+
+    /* Nav */
+
+    #logo {
+        text-align: right;
+    }
+
+    #navbar-links {
+        text-align: left;
+    }
+
+    #navbar-links a {
+        padding-left: 10px;
+    }
+
+    .login {
+        padding-left: 10px;
+    }
+
+    /* About */
+
+    #about-area img {
+        margin-top: 100px;
+    }
+
+    /* Apply */
+
+    #apply-area .apply-box {
+        padding: 50px 25px;
+    }
+
+    /* News */
+
+    #news-area p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #id-email {
+        width: 70%;
+    }
+
+    /* Call */
+
+    #call-area {
+        margin-top: 30px;
+    }
+
+    #call-area .container {
+        padding: 30px;
+    }
+
+    #call-area p, #call-area #call-btn {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    /* Footer */
+
+    #form-btn {
+        width: 60%;
+    }
+}
+
+@media (max-width: 450px) {
+    /* Slider */
+
+    #mainSlider {
+        margin-top: 90px;
+    }
+
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    #mainSlider .carousel-caption p {
+        display: none;
+    }
+
+    #carousel-caption .main-btn {
+        font-size: 14px;
+    }
+
+    /* About */
+
+    .main-title {
+        font-size: 30px;
+    }
+
+    #about-area img {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    /* Apply */
+
+    #apply-area {
+        height: auto;
+    }
+
+    #company-img {
+        display: none;
+    }
+
+    /* News */
+
+    #news-area .main-title {
+        font-size: 24px;
+    }
+
+    #news-area p {
+        font-size: 16px;
+    }
+
+    #id-email {
+        width: 80%;
+    }
+
+    /* Call */
+
+    #call-area p {
+        font-size: 12px;
+        letter-spacing: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    #call-area #call-btn {
+        height: 30%;
+    }
+
+    /* Contact */
+
+    .contact-box {
+        border: none;
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    #news-container,
+    #contact-container,
+    #links-container {
+        padding: 0;
+        border: 0;
+        margin-bottom: 2em;
+    }
+
+    #form-btn {
+        width: 40%;
+    }
+}
+
+@media (max-width: 350px) {
+    /* Slider */
+
+    #mainSlider {
+        margin-top: 90px;
+    }
+        
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+        
+    #mainSlider .carousel-caption h2 {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    #mainSlider .carousel-caption p {
+        display: none;
+    }
+
+    #carousel-caption .main-btn {
+        font-size: 5px;
+    }
+
+    /* About */
+
+    .main-title {
+        font-size: 25px;
+    }
+
+    #about-list li {
+        font-size: 13px;
+    }
+
+    #about-area img {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    /* Apply */
+
+    #apply-area {
+        height: auto;
+    }
+
+    #company-img {
+        display: none;
+    }
+
+    /* News */
+
+    #news-area .main-title {
+        font-size: 24px;
+    }
+
+    #news-area p {
+        font-size: 16px;
+    }
+
+    #id-email {
+        width: 80%;
+    }
+
+    /* Call */
+
+    #call-area p {
+        font-size: 14px;
+        letter-spacing: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    #call-area #call-btn {
+        height: 10%;
+    }
+
+    /* Contact */
+
+    .contact-box {
+        border: none;
+        margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    #news-container,
+    #contact-container,
+    #links-container {
+        padding: 0;
+        border: 0;
+        margin-bottom: 2em;
+    }
+
+    #form-btn {
+        width: 50%;
+    }
+
+    #social-icons i {
+        font-size: 20px;
+    }
+
+
+}

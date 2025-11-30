@@ -132,5 +132,18 @@ document.getElementById('projectModal').addEventListener('click', (e) => {
     }
 });
 
-// Inicializar
-renderProjects();
+emailjs.init("09lwT_-y4ONwn-x4l");
+
+document.getElementById("formContato").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_oowdhc2",
+        "template_ho33bnl",
+        this
+    ).then(() => {
+        document.getElementById("status").innerText = "Mensagem enviada!";
+    }, (error) => {
+        document.getElementById("status").innerText = "Erro: " + JSON.stringify(error);
+    });
+});

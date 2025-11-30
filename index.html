@@ -19,6 +19,8 @@
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -178,10 +180,20 @@
                     <div class="col-12" id="footer-details">
                         <div class="col-12 col-md-6" id="news-container">
                             <p class="muted">Interessado em trabalhar comigo? Envie uma mensagem.</p>
-                            <form action="">
+                            <p id="status"></p>
+                            <form action="" id="formContato">
                                 <div class="mb-3">
                                     <div class="input-box">
-                                        <input type="email" class="input" required>
+                                        <input type="text" class="input" name="name" required>
+                                        <label class="label">
+                                            <span class="char" style="--index: 0">N</span>
+                                            <span class="char" style="--index: 1">a</span>
+                                            <span class="char" style="--index: 2">m</span>
+                                            <span class="char" style="--index: 3">e</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-box">
+                                        <input type="email" class="input" name="email" required>
                                         <label class="label">
                                             <span class="char" style="--index: 0">E</span>
                                             <span class="char" style="--index: 1">m</span>
@@ -192,7 +204,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <div class="input-box">
-                                            <textarea name="mensagem" class="input"></textarea>
+                                            <textarea name="message" class="input"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -216,6 +228,9 @@
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+         // <-- USE SEU PUBLIC KEY
+    </script>
 </body>
 
 </html>

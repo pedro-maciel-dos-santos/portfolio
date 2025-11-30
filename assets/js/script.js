@@ -3,27 +3,6 @@ AOS.init({
     once: false,
 });
 
-const hamb = document.getElementById('hambBtn');
-hamb.addEventListener('click', () => {
-    const ul = document.querySelector('nav ul');
-    const icon = hamb.querySelector('i');
-    if (ul.style.display === 'flex') {
-        ul.style.display = 'none'; icon.className = 'fa fa-bars';
-    } else { ul.style.display = 'flex'; ul.style.flexDirection = 'column'; ul.style.position = 'absolute'; ul.style.right = '22px'; ul.style.top = '72px'; ul.style.background = 'linear-gradient(180deg, rgba(10,8,20,0.9), rgba(10,8,20,0.95))'; ul.style.padding = '18px'; ul.style.borderRadius = '10px'; icon.className = 'fa fa-times'; }
-});
-
-
-
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function (e) {
-        e.preventDefault();
-        const id = this.getAttribute('href').substring(1);
-        const t = document.getElementById(id);
-        if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-        // close mobile menu
-        const ul = document.querySelector('nav ul'); if (window.innerWidth < 760) ul.style.display = 'none';
-    });
-});
 
 document.getElementById("year").textContent = new Date().getFullYear();
 

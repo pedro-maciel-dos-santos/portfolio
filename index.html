@@ -29,15 +29,31 @@
         <div class="logo" data-aos="fade-down">Pedro Maciel dos Santos</div>
         <nav data-aos="fade-down" data-aos-delay="150">
             <ul>
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">Sobre mim</a></li>
-                <li><a href="">Projetos</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <button class="hamburger" id="hambBtn" aria-label="menu" data-aos="fade-left"><i
-                class="fa fa-bars"></i></button>
+        <button class="hamburger" id="hamburguer" aria-label="menu" data-aos="fade-left">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#sobre"><i class="fas fa-user"></i> Sobre mim</a></li>
+            <li><a href="#projetos"><i class="fas fa-folder"></i> Projetos</a></li>
+            <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
     <main>
         <section id="home" class="container">
@@ -102,7 +118,7 @@
             </div>
 
             <!-- About block -->
-            <div id="about" data-aos="fade-up">
+            <div id="sobre" data-aos="fade-up">
                 <div class="about-top">
                     <div class="container-about-top">
                         <div class="square">
@@ -110,9 +126,107 @@
                         <div class="hi">Olá, eu sou</div>
                     </div>
                     <h3 class="name">Pedro Maciel dos Santos</h3>
-                    <p>Graduando Engenharia de Software, apaixonado por desenvolvimento
-                        front-end e back-end, meu foco é criar experiências digitais envolventes e sempre me esforço
-                        para entregar as melhores soluções em cada projeto.</p>
+                    <!-- Intro -->
+                    <p class="intro-text">
+                        Estudante de <strong>Engenharia de Software</strong> focado em Desenvolvimento Web e Fullstack,
+                        atualmente cursando o <strong>4º período</strong>. Busco oportunidade de estágio para aplicar e
+                        expandir minha experiência em soluções e integrações de sistemas, especialmente utilizando
+                        <strong>PHP, Laravel, APIs REST, JavaScript, N8N, HTML, CSS e Bootstrap</strong>.
+                    </p>
+                    <!-- Skills Grid -->
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3>Desenvolvimento Back-end</h3>
+                            </div>
+                            <p>Experiência no desenvolvimento e manutenção de sistemas de gerenciamento (como para
+                                oficinas mecânicas e uso de clientes jurídicos).</p>
+                            <ul>
+                                <li>PHP & Laravel</li>
+                                <li>APIs REST</li>
+                                <li>Integração de sistemas</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>Desenvolvimento Front-end</h3>
+                            </div>
+                            <p>Habilidades em JavaScript, HTML5, CSS3 e Bootstrap para criar interfaces modernas e
+                                responsivas.</p>
+                            <ul>
+                                <li>JavaScript moderno</li>
+                                <li>HTML5 & CSS3</li>
+                                <li>Bootstrap & Design responsivo</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>Banco de Dados & Automação</h3>
+                            </div>
+                            <p>Uso de N8N para automação e experiência com sistemas de banco de dados MySQL, PHPMyAdmin
+                                e Supabase.</p>
+                            <ul>
+                                <li>MySQL & PHPMyAdmin</li>
+                                <li>Supabase</li>
+                                <li>N8N para automação</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3>Ferramentas & Tecnologias</h3>
+                            </div>
+                            <p>Uso de Git, GitHub e Postman para versionamento, colaboração e testes de APIs.</p>
+                            <ul>
+                                <li>Git & GitHub</li>
+                                <li>Postman</li>
+                                <li>Controle de versão</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Competências -->
+                    <div class="competencies">
+                        <h3><i class="fas fa-star"></i> Competências Comportamentais</h3>
+                        <div class="comp-grid">
+                            <div class="comp-item">
+                                <h4><i class="fas fa-bug"></i> Resolução de Problemas</h4>
+                                <p>Diagnóstico e correção de bugs em APIs e integração, garantindo eficiência nos
+                                    processos.</p>
+                            </div>
+                            <div class="comp-item">
+                                <h4><i class="fas fa-users"></i> Trabalho em Equipe</h4>
+                                <p>Colaboração efetiva, com escuta ativa para entender necessidades de usuários e
+                                    colegas.</p>
+                            </div>
+                            <div class="comp-item">
+                                <h4><i class="fas fa-brain"></i> Organização e Adaptabilidade</h4>
+                                <p>Gerenciamento eficiente de tarefas e aprendizado rápido em novas tecnologias para
+                                    entregas ágeis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Text -->
+                    <p class="intro-text" style="margin-bottom: 30px;">
+                        Estou cursando ativamente o <strong>Bacharelado em Engenharia de Software</strong> e busco uma
+                        empresa onde eu possa aplicar minhas habilidades técnicas e comportamentais para criar
+                        <strong>soluções eficientes e inovadoras</strong>.
+                    </p>
                     <div class="buttons-about">
                         <a href="assets/pdf/Currículo Pedro.pdf" type="application/pdf" class="link primary glow-hover"
                             target="_blank">
@@ -153,7 +267,7 @@
                 <h1>Projetos em Destaque</h1>
                 <p class="subtitle">Confira alguns dos meus melhores trabalhos</p>
                 <div class="projects-grid" id="projectsContainer">
-                    
+
                 </div>
             </div>
 
@@ -166,7 +280,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contato">
         <div class="container-fluid" id="footer">
             <div class="container container-footer">
                 <div class="row">
@@ -229,7 +343,105 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-         // <-- USE SEU PUBLIC KEY
+        const hamburger = document.getElementById('hamburguer'); // Corrigido: hamburguer em vez de hamburger
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const menuLinks = document.querySelectorAll('.mobile-menu a');
+
+        // Verificar se os elementos existem
+        if (!hamburger || !mobileMenu || !overlay) {
+            console.error('Elementos do menu não encontrados!');
+        } else {
+            // Toggle menu
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+            });
+
+            // Fechar menu ao clicar no overlay
+            overlay.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Fechar menu ao clicar em um link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Remove active de todos os links
+                    menuLinks.forEach(l => l.classList.remove('active'));
+                    // Adiciona active ao link clicado
+                    link.classList.add('active');
+
+                    // Fecha o menu
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+
+            // Fechar menu ao pressionar ESC
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Scroll suave para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+
+                // Ignora links com apenas "#"
+                if (href === '#') return;
+
+                e.preventDefault();
+
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerOffset = 72; // Altura do header
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Atualizar link ativo na navegação ao fazer scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    // Remove active de todos os links
+                    document.querySelectorAll('nav a, .mobile-menu a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+
+                    // Adiciona active aos links correspondentes
+                    document.querySelectorAll(`nav a[href="#${sectionId}"], .mobile-menu a[href="#${sectionId}"]`).forEach(link => {
+                        link.classList.add('active');
+                    });
+                }
+            });
+        });
     </script>
 </body>
 

@@ -9,7 +9,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 const projects = [
     {
         id: 1,
-        title: "Projeto 1 — Login Animado",
+        title: "Login Animado",
         category: "Login/Signup",
         description: "Interface moderna de autenticação com animação entre Login e Sign Up.",
         fullDescription: "Uma interface moderna de autenticação, contendo telas de Login e Cadastro (Sign Up) integradas em um único layout. O projeto inclui animações suaves, transições entre etapas e design responsivo. Ideal para aplicações que desejam uma experiência de entrada elegante e intuitiva.",
@@ -20,7 +20,7 @@ const projects = [
     },
     {
         id: 2,
-        title: "Projeto 2 — Website Completo",
+        title: "Website Completo",
         category: "Website",
         description: "Website completo e responsivo com foco em design e navegação fluida.",
         fullDescription: "Website totalmente desenvolvido do zero, com estrutura responsiva, layout moderno e foco na experiência do usuário. Inclui seções de serviços, navegação fluida, visual limpo e técnicas de responsividade para diferentes dispositivos. Demonstra domínio em front-end e boas práticas de desenvolvimento web.",
@@ -31,7 +31,7 @@ const projects = [
     },
     {
         id: 3,
-        title: "Projeto 3 — Presente Romântico",
+        title: "Presente Romântico",
         category: "Code Gift",
         description: "Aplicação romântica e interativa criada como presente personalizado.",
         fullDescription: "Aplicação especial criada como um presente interativo e romântico, com efeitos visuais, música, animações e interface personalizada. Um projeto criativo que combina tecnologia com emoção, demonstrando domínio em JavaScript e experiências imersivas.",

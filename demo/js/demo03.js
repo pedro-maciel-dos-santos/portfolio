@@ -1,114 +1,80 @@
-/* CHUVA DE CORAÇÕES */
+const heartContainer = document.getElementById('heartContainer');
+const messageBox = document.getElementById('messageBox');
+let isOpen = false;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const heartsContainer = document.getElementById("hearts-container");
+function toggle(e) {
+  e.stopPropagation();
+  isOpen = !isOpen;
 
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerText = '💖';
-
-    // Posição aleatória na largura da tela
-    heart.style.left = Math.random() * 100 + 'vw';
-
-    // Tamanho aleatório
-    const size = Math.random() * 10 + 20;
-    heart.style.fontSize = `${size}px`;
-
-    // Duração aleatória
-    const duration = Math.random() * 2 + 3;
-    heart.style.animationDuration = `${duration}s`;
-
-    document.body.appendChild(heart);
-
-    // Remove o coração após a animação
+  if (isOpen) {
+    heartContainer.classList.add('hidden');
     setTimeout(() => {
-      heart.remove();
-    }, duration * 1000);
+      messageBox.classList.add('visible');
+    }, 300);
+  } else {
+    messageBox.classList.remove('visible');
+    setTimeout(() => {
+      heartContainer.classList.remove('hidden');
+    }, 600);
   }
 
-  // Cria um novo coração a cada 200ms
-  setInterval(createHeart, 200);
-});
-
-/* CONTROLES */
-
-document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('#mainSlider');
-    const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
-
-    const slides = carousel.querySelectorAll('.carousel-item img');
-
-    slides.forEach(img => {
-      img.style.cursor = 'pointer'; // cursor de clique
-      img.addEventListener('click', () => {
-        carouselInstance.next();
-      });
-    });
-  });
-
-/* TEMPO DE RELACIONAMENTO */
-
-const dataInicio = new Date("2025-09-22T00:00:00");
-
-function atualizarContador() {
-  const agora = new Date();
-
-  let anos = agora.getFullYear() - dataInicio.getFullYear();
-  let meses = agora.getMonth() - dataInicio.getMonth();
-  let dias = agora.getDate() - dataInicio.getDate();
-  let horas = agora.getHours() - dataInicio.getHours();
-  let minutos = agora.getMinutes() - dataInicio.getMinutes();
-  let segundos = agora.getSeconds() - dataInicio.getSeconds();
-
-  // Corrigir valores negativos (fazendo "empréstimos" de unidade maior)
-  if (segundos < 0) {
-    segundos += 60;
-    minutos--;
-  }
-  if (minutos < 0) {
-    minutos += 60;
-    horas--;
-  }
-  if (horas < 0) {
-    horas += 24;
-    dias--;
-  }
-  if (dias < 0) {
-    meses--;
-    const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
-    dias += mesAnterior.getDate();
-  }
-  if (meses < 0) {
-    meses += 12;
-    anos--;
-  }
-
-  // Exibir no HTML
-  document.getElementById("contador").innerHTML = `
-      ${anos} ano${anos !== 1 ? 's' : ''}, 
-      ${meses} mes${meses !== 1 ? 'es' : ''}, 
-      ${dias} dia${dias !== 1 ? 's' : ''}, 
-      ${horas} hora${horas !== 1 ? 's' : ''}, 
-      ${minutos} minuto${minutos !== 1 ? 's' : ''} e 
-      ${segundos} segundo${segundos !== 1 ? 's' : ''}
-    `;
+  createSparkles(e.clientX, e.clientY);
 }
 
-atualizarContador();
-setInterval(atualizarContador, 1000);
+heartContainer.addEventListener('click', toggle);
+messageBox.addEventListener('click', toggle);
 
-/* TROCA DE TELA */
+function createSparkles(x, y) {
+  for (let i = 0; i < 15; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = x + 'px';
+    sparkle.style.top = y + 'px';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('btnEntrar');
-    const tela = document.getElementById('telaInicial');
+    const angle = (Math.PI * 2 * i) / 15;
+    const distance = 60 + Math.random() * 40;
+    const tx = Math.cos(angle) * distance;
+    const ty = Math.sin(angle) * distance;
 
-    btn.addEventListener('click', () => {
-      tela.style.opacity = '0';
-      tela.style.transition = 'opacity 0.8s ease';
-      setTimeout(() => {
-        tela.style.display = 'none';
-      }, 800);
-    });
-  });
+    sparkle.style.setProperty('--tx', tx + 'px');
+    sparkle.style.setProperty('--ty', ty + 'px');
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1500);
+  }
+}
+
+// Efeito de rastro do cursor
+let lastTime = 0;
+document.addEventListener('mousemove', function (e) {
+  const now = Date.now();
+  if (now - lastTime < 50) return;
+  lastTime = now;
+
+  const trail = document.createElement('div');
+  trail.style.position = 'fixed';
+  trail.style.width = '3px';
+  trail.style.height = '3px';
+  trail.style.background = '#667eea';
+  trail.style.borderRadius = '50%';
+  trail.style.left = e.clientX + 'px';
+  trail.style.top = e.clientY + 'px';
+  trail.style.pointerEvents = 'none';
+  trail.style.opacity = '0.5';
+  trail.style.transition = 'all 0.8s ease-out';
+  trail.style.zIndex = '999';
+
+  document.body.appendChild(trail);
+
+  setTimeout(() => {
+    trail.style.opacity = '0';
+    trail.style.transform = 'scale(4)';
+  }, 10);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 800);
+});

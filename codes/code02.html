@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Código - Website Completo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="../assets/css/code.css">
+</head>
+
+<body>
+  <div class="code-container">
+    <button class="copy-btn" data-target="codigo-html">Copiar</button>
+  <pre>
+  <code class="language-html" id="codigo-html">
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Website Completo&lt;/title&gt;
+
+    &lt;link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"&gt;
+
+    &lt;!-- Fonte --&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"&gt;
+
+    &lt;!-- AOS --&gt;
+    &lt;link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"&gt;
+    &lt;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"&gt;
+
+    &lt;!-- Bootstrap Icons --&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"&gt;
+
+    &lt;!-- Estilos --&gt;
+    &lt;link rel="stylesheet" href="css/demo02.css"&gt;
+    &lt;link rel="stylesheet" href="css/demo02Responsive.css"&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"&gt;
+    &lt;/script&gt;
+&lt;/head&gt;
+    &lt;header id="home-area"&gt;
+        &lt;div class="container" id="nav-container"&gt;
+            &lt;nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-custom"&gt;
+                &lt;div class="container-fluid d-flex justify-content-between align-items-center"&gt;
+
+              &lt;!-- LOGO: sempre à esquerda --&gt;
+                &lt;a class="navbar-brand order-1 order-lg-1" href="#"&gt;
+                    &lt;img src="img/DragonVeloper.png" alt="Logo da DragonVeloper" id="logo"&gt;
+                &lt;/a&gt;
+
+                &lt;!-- BOTÃO HAMBURGUER: vai pra direita em telas pequenas --&gt;
+                &lt;button class="navbar-toggler order-2 order-lg-3 ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false"
+                    aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+
+                &lt;!-- LINKS DO MENU --&gt;
+                &lt;div class="collapse navbar-collapse order-3 order-lg-2" id="navbar-links"&gt;
+                    &lt;div class="navbar-nav md-auto"&gt;
+                        &lt;a href="#home-area" class="nav-item nav-link" id="home-menu"&gt;Home&lt;/a&gt;
+                        &lt;a href="#about-area" class="nav-item nav-link" id="about-menu"&gt;DragonVeloper&lt;/a&gt;
+                        &lt;a href="#services-area" class="nav-item nav-link" id="services-menu"&gt;Serviços&lt;/a&gt;
+                        &lt;a href="#solutions-area" class="nav-item nav-link" id="solutions-menu"&gt;Soluções&lt;/a&gt;
+                        &lt;a href="#contact-area" class="nav-item nav-link" id="contact-menu"&gt;Contato&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;section class="carousel slide" id="mainSlider" data-bs-ride="carousel"&gt;
+            &lt;div class="carousel-indicators"&gt;
+                &lt;button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"&gt;
+                &lt;/button&gt;
+                &lt;button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1"&gt;
+                &lt;/button&gt;
+                &lt;button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2"&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="carousel-inner"&gt;
+                &lt;div class="carousel-item active"&gt;
+                    &lt;img src="img/evento.png" alt="Evento de desenvolvimento web" class="d-block w-100"&gt;
+                    &lt;div class="carousel-caption d-md-block"&gt;
+                        &lt;h2&gt;Participe de nossos eventos!&lt;/h2&gt;
+                        &lt;p&gt;Veja as datas de nosso eventos e clique para participar!&lt;/p&gt;
+                        &lt;a href="#" class="main-btn"&gt;Participar&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                    &lt;img src="img/servico.png" alt="Desenvolva seu site" class="d-block w-100"&gt;
+                    &lt;div class="carousel-caption d-md-block"&gt;
+                        &lt;h2&gt;Está querendo tirar o projeto do papel?&lt;/h2&gt;
+                        &lt;p&gt;Nossa equipe de desenvolvedores web está pronta para lhe atender.&lt;/p&gt;
+                        &lt;a href="#" class="main-btn"&gt;Iniciar projeto&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="carousel-item"&gt;
+                    &lt;img src="img/manutencao.png" alt="Manutenção de sites" class="d-block w-100"&gt;
+                    &lt;div class="carousel-caption d-md-block"&gt;
+                        &lt;h2&gt;Está buscando manutenção no seu site?&lt;/h2&gt;
+                        &lt;p&gt;Contamos com profissionais qualificados para resolver seu problema.&lt;/p&gt;
+                        &lt;a href="#" class="main-btn"&gt;Agendar Manutenção&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;a href="#mainSlider" class="carousel-control-prev" role="button" data-bs-slide="prev"&gt;
+                &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href="#mainSlider" class="carousel-control-next" role="button" data-bs-slide="next"&gt;
+                &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Next&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/section&gt;
+        &lt;section id="about-area"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-12"&gt;
+                        &lt;h3 class="main-title" data-aos="fade-up"&gt;Sobre a DragonVeloper&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-6" data-aos="fade-right"&gt;
+                        &lt;img src="img/agencia.jpg" alt="Agência DragonVeloper" class="img-fluid"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-6" data-aos="fade-left"&gt;
+                        &lt;h3 class="about-title"&gt;Uma agência que pensa no futuro&lt;/h3&gt;
+                        &lt;p&gt;Nossos projetos são adaptados ao cliente e seu propósito.&lt;/p&gt;
+                        &lt;p&gt;Após a especificação do projetos os arquitetos de software definirão as melhores
+                            tecnologias para seu projeto.&lt;/p&gt;
+                        &lt;p&gt;E nossos designers trabalharão na sua interface/layout para impulsionar o negócio.&lt;/p&gt;
+                        &lt;p&gt;Veja outros diferenciais:&lt;/p&gt;
+                        &lt;ul id="about-list"&gt;
+                            &lt;li&gt;&lt;i class="bi bi-check-lg"&gt;&lt;/i&gt;Utilização de IAs&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="bi bi-check-lg"&gt;&lt;/i&gt;Layout responsivo para todos os dispositivos&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="bi bi-check-lg"&gt;&lt;/i&gt;otimização para mecanismos de busca&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="bi bi-check-lg"&gt;&lt;/i&gt;Desenvolvimento com metodologia ágil&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="bi bi-check-lg"&gt;&lt;/i&gt;E-commerce&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section id="services-area"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-12"&gt;
+                        &lt;h3 class="main-title" data-aos="fade-up"&gt;Nossas especialidades&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-4 service-box"&gt;
+                        &lt;div class="card-service h-100 text-center shadow-sm" data-aos="fade-up"
+                            data-aos-delay="100"&gt;
+                            &lt;i class="bi bi-phone-fill"&gt;&lt;/i&gt;
+                            &lt;h4&gt;Aplicativos Nativos&lt;/h4&gt;
+                            &lt;p&gt;Utilizamos o real poder dos dispositivos móveis construindo aplicativos nativos.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-4 service-box"&gt;
+                        &lt;div class="card-service h-100 text-center shadow-sm" data-aos="fade-up"
+                            data-aos-delay="200"&gt;
+                            &lt;i class="bi bi-cart3"&gt;&lt;/i&gt;
+                            &lt;h4&gt;E-commerce&lt;/h4&gt;
+                            &lt;p&gt;Temos uma plataforma própria de e-commerce que se adapta a qualquer regra de negócio
+                                (B2C
+                                e B2B).&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-4 service-box"&gt;
+                        &lt;div class="card-service h-100 text-center shadow-sm" data-aos="fade-up"
+                            data-aos-delay="300"&gt;
+                            &lt;i class="bi bi-brush-fill"&gt;&lt;/i&gt;
+                            &lt;h4&gt;Design Criativo&lt;/h4&gt;
+                            &lt;p&gt;Nossos designers são especializados em UI/UX e possuem vasta experiência no mercado
+                                de
+                                software.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-4 service-box"&gt;
+                        &lt;div class="card-service h-100 text-center shadow-sm" data-aos="fade-up"
+                            data-aos-delay="400"&gt;
+                            &lt;i class="bi bi-google"&gt;&lt;/i&gt;
+                            &lt;h4&gt;Experts em SEO&lt;/h4&gt;
+                            &lt;p&gt;Com Nossos serviços de marketing seu site será melhor posicionado no Google e venderá
+                                mais.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-4 service-box"&gt;
+                        &lt;div class="card-service h-100 text-center shadow-sm" data-aos="fade-up"
+                            data-aos-delay="500"&gt;
+                            &lt;i class="bi bi-headset"&gt;&lt;/i&gt;
+                            &lt;h4&gt;Suporte 24/7&lt;/h4&gt;
+                            &lt;p&gt;Suporte técnico especializado em sites: manutenção, segurança, otimização e resolução
+                                de
+                                problemas para a sua presença online.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-4 service-box"&gt;
+                        &lt;div class="card-service h-100 text-center shadow-sm" data-aos="fade-up"
+                            data-aos-delay="600"&gt;
+                            &lt;i class="bi bi-hdd-rack-fill"&gt;&lt;/i&gt;
+                            &lt;h4&gt;Experiência em servidores&lt;/h4&gt;
+                            &lt;p&gt;Garantimos uptime e também rápido tempo de resposta do seu site para o seu cliente.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section id="apply-area"&gt;
+            &lt;div class="container-fluid"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-6 apply-box" id="company-img"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-6 apply-box" id="pattern-img"&gt;
+                        &lt;h4&gt;Gosta de desafios?&lt;/h4&gt;
+                        &lt;p&gt;Temos várias posições abertas, entre elas: Software Engineer, UI/UX Designer, Project
+                            Manager e mais.&lt;/p&gt;
+                        &lt;p&gt;Clique no botão abaixo e confira os benefícios e as posições em aberto.&lt;/p&gt;
+                        &lt;p&gt;Aqui você terá a chance de trabalhar com as melhores tecnologias e os profissionais mais
+                            capacitados.&lt;/p&gt;
+                        &lt;a href="#" class="main-btn" id="apply-btn"&gt;Saiba Mais&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- Products Section --&gt;
+        &lt;section id="solutions-area" class="py-section"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up"&gt;
+                        &lt;h2 class="display-4 fw-bold mb-4"&gt;Nossas Soluções&lt;/h2&gt;
+                        &lt;p class="lead"&gt;
+                            Conheça os sistemas que vão revolucionar a gestão da sua empresa
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="row g-4"&gt;
+                    &lt;!-- ERP Card --&gt;
+                    &lt;div class="col-lg-4" data-aos="fade-up" data-aos-delay="100"&gt;
+                        &lt;div class="card h-100"&gt;
+                            &lt;div class="card-body p-4"&gt;
+                                &lt;div class="mb-4"&gt;
+                                    &lt;img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;h=300&amp;q=80"
+                                        alt="ERP Sistema" class="img-fluid rounded-3"&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class="h4 fw-bold mb-3"&gt;ERP Inteligente&lt;/h3&gt;
+                                &lt;p class="text-muted mb-4"&gt;
+                                    Sistema completo de gestão empresarial com IA integrada para automatizar
+                                    processos
+                                    e otimizar a tomada de decisões.
+                                &lt;/p&gt;
+                                &lt;ul class="feature-list mb-4"&gt;
+                                    &lt;li&gt;Gestão financeira completa&lt;/li&gt;
+                                    &lt;li&gt;Controle de estoque inteligente&lt;/li&gt;
+                                    &lt;li&gt;Relatórios em tempo real&lt;/li&gt;
+                                    &lt;li&gt;Integração com e-commerce&lt;/li&gt;
+                                &lt;/ul&gt;
+                                &lt;a href="#" class="btn-card-gradient"&gt;
+                                    Começar agora
+                                    &lt;i class="fas fa-arrow-right ms-2"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- CRM Card (Featured) --&gt;
+                    &lt;div class="col-lg-4" data-aos="fade-up" data-aos-delay="200"&gt;
+                        &lt;div class="card h-100 card-featured"&gt;
+                            &lt;div class="card-body p-4"&gt;
+                                &lt;div class="mb-4"&gt;
+                                    &lt;img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;h=300&amp;q=80"
+                                        alt="CRM Sistema" class="img-fluid rounded-3"&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class="h4 fw-bold mb-3"&gt;CRM Avançado&lt;/h3&gt;
+                                &lt;p class="text-muted mb-4"&gt;
+                                    Gerencie relacionamentos com clientes de forma inteligente, aumentando vendas
+                                    e melhorando a experiência do cliente.
+                                &lt;/p&gt;
+                                &lt;ul class="feature-list mb-4"&gt;
+                                    &lt;li&gt;Automação de vendas&lt;/li&gt;
+                                    &lt;li&gt;Analytics preditivo&lt;/li&gt;
+                                    &lt;li&gt;Gestão de pipeline&lt;/li&gt;
+                                    &lt;li&gt;Integração omnichannel&lt;/li&gt;
+                                &lt;/ul&gt;
+                                &lt;a href="#" class="btn-card-gradient"&gt;
+                                    Começar agora
+                                    &lt;i class="fas fa-rocket ms-2"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- BI Card --&gt;
+                    &lt;div class="col-lg-4" data-aos="fade-up" data-aos-delay="300"&gt;
+                        &lt;div class="card h-100"&gt;
+                            &lt;div class="card-body p-4"&gt;
+                                &lt;div class="mb-4"&gt;
+                                    &lt;img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;h=300&amp;q=80"
+                                        alt="BI Sistema" class="img-fluid rounded-3"&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class="h4 fw-bold mb-3"&gt;Business Intelligence&lt;/h3&gt;
+                                &lt;p class="text-muted mb-4"&gt;
+                                    Transforme dados em insights acionáveis com nossa plataforma de análise
+                                    e visualização de dados.
+                                &lt;/p&gt;
+                                &lt;ul class="feature-list mb-4"&gt;
+                                    &lt;li&gt;Dashboards interativos&lt;/li&gt;
+                                    &lt;li&gt;Machine Learning integrado&lt;/li&gt;
+                                    &lt;li&gt;Alertas automáticos&lt;/li&gt;
+                                    &lt;li&gt;Previsões inteligentes&lt;/li&gt;
+                                &lt;/ul&gt;
+                                &lt;a href="#" class="btn-card-gradient"&gt;
+                                    Começar agora
+                                    &lt;i class="fas fa-arrow-right ms-2"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section id="call-area"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;p&gt;Deseja fazer um orçamento sem compromisso?&lt;/p&gt;
+                    &lt;button class="main-btn" id="call-btn"&gt;Orçar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;div&gt;
+    &lt;section id="contact-area"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-12" data-aos="fade-up"&gt;
+                    &lt;h3 class="main-title"&gt;
+                        Entre em contato conosco
+                    &lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 contact-box" data-aos="fade-up" data-aos-delay="100"&gt;
+                    &lt;i class="bi bi-telephone-fill"&gt;&lt;/i&gt;
+                    &lt;p&gt;
+                        &lt;span class="contact-title"&gt;
+                            Ligue para:
+                        &lt;/span&gt;
+                        (11)99999-9999
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;span class="contact-title"&gt;
+                            Horário:
+                        &lt;/span&gt;
+                        8:00 - 19:00
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 contact-box" data-aos="fade-up" data-aos-delay="200"&gt;
+                    &lt;i class="bi bi-envelope"&gt;&lt;/i&gt;
+                    &lt;p&gt;
+                        &lt;span class="contact-title"&gt;
+                            Envie seu e-mail:
+                        &lt;/span&gt;
+                        dragonveloper@gmail.com
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 contact-box" data-aos="fade-up" data-aos-delay="300"&gt;
+                    &lt;i class="bi bi-geo-alt-fill"&gt;&lt;/i&gt;
+                    &lt;p&gt;
+                        &lt;span class="contact-title"&gt;
+                            Venha tomar um café:
+                        &lt;/span&gt;
+                        Av. Paulista 575
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+    &lt;div class="background"&gt;
+        &lt;div class="waves"&gt;
+            &lt;div class="wave wave-1"&gt;&lt;/div&gt;
+            &lt;div class="wave wave-2"&gt;&lt;/div&gt;
+            &lt;div class="wave wave-3"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="container-fluid" id="footer"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-12" id="footer-top"&gt;
+                    &lt;div class="row justify-content-between"&gt;
+                        &lt;div class="col-4"&gt;
+                            &lt;img src="img/marca.png" alt="Logo marca da DragonVeloper" id="logomarca"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12" id="footer-details"&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-12 col-md-4" id="news-container"&gt;
+                            &lt;h4&gt;Fique por dentro das novidades:&lt;/h4&gt;
+                            &lt;p class="footer-p-news"&gt;Inscreva-se para saber em primeira mão&lt;/p&gt;
+                            &lt;form action=""&gt;
+                                &lt;div class="mb-3"&gt;
+                                    &lt;div class="input-box"&gt;
+                                        &lt;input type="email" class="input" required&gt;
+                                        &lt;label class="label"&gt;
+                                            &lt;span class="char" style="--index: 0"&gt;E&lt;/span&gt;
+                                            &lt;span class="char" style="--index: 1"&gt;m&lt;/span&gt;
+                                            &lt;span class="char" style="--index: 2"&gt;a&lt;/span&gt;
+                                            &lt;span class="char" style="--index: 3"&gt;i&lt;/span&gt;
+                                            &lt;span class="char" style="--index: 4"&gt;l&lt;/span&gt;
+                                        &lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;button class="btn-gradient" type="submit"&gt;Inscrever&lt;/button&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-12 col-md-4" id="links-container"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;h4&gt;Pode estar procurando por:&lt;/h4&gt;
+                                &lt;div class="col-6"&gt;
+                                    &lt;ul class="list-unstyled"&gt;
+                                        &lt;li&gt;&lt;a href="#" class="link-footer"&gt;Contratar&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#" class="link-footer"&gt;Manutenção&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-6"&gt;
+                                    &lt;ul class="list-unstyled"&gt;
+                                        &lt;li&gt;&lt;a href="#" class="link-footer"&gt;Eventos&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#" class="link-footer"&gt;Suporte&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-12 col-md-4"&gt;
+                            &lt;h4&gt;Nossas redes sociais:&lt;/h4&gt;
+                            &lt;div class="menu"&gt;
+                                &lt;div class="toggle"&gt;
+                                    &lt;i class="bi bi-share-fill"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                                &lt;li style="--i: 0; --clr: #1877f2"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 1; --clr: #361022"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-tiktok"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 2; --clr: #cd3d8a"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 3; --clr: #0a66c2"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 4; --clr: #25d366"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-whatsapp"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 5; --clr: #bd081c"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 6; --clr: #ff0000"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li style="--i: 7; --clr: #222222"&gt;
+                                    &lt;a href="#"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12" id="footer-bottom"&gt;
+                    &lt;div class="row justify-content-between"&gt;
+                        &lt;div class="col-12 col-md-4"&gt;
+                            &lt;p&gt;
+                                &amp;copy; 2025
+                                &lt;a href="https://github.com/pedro-maciel-dos-santos"
+                                    class="link-footer"&gt;DragonVeloper
+                                &lt;/a&gt;
+                                Todos os direitos reservados
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-12 col-md-4"&gt;
+                            &lt;p&gt;Realizamos o seu projeto!&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;script src="js/demo02.js"&gt;&lt;/script&gt;
+    </code>
+</pre>
+</div>
+
+<div class="code-container">
+  <button class="copy-btn" data-target="codigo-css">Copiar</button>
+<pre>
+  <code class="language-css" id="codigo-css">
+    @charset "UTF-8";
+
+:root {
+    --primary-color-blue: #65daf9;
+    --second-color-blue: #3ec1d5;
+    --third-color-blue: #4597d1;
+    --fourth-color-blue: #0559bf;
+    --fifth-color-blue: #032d5f;
+    --primary-color-gray: #353d41;
+    --second-color-gray: #7a7a7a;
+    --primary-color-dark: #050505;
+
+    --gradient-blue-f: linear-gradient(135deg, var(--third-color-blue) 0%, var(--fourth-color-blue) 100%);
+    --gradient-blue-s: linear-gradient(135deg, var(--fifth-color-blue) 0%, var(--third-color-blue) 100%);
+
+}
+
+
+/* === GERAIS === */
+
+body {
+    /*font-family: 'Roboto', 'sans-serif';*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+.row {
+    margin: 0;
+}
+
+p,
+li {
+    color: #444;
+    font-size: 14px;
+}
+
+/* === BTN === */
+
+.main-btn {
+    background-color: var(--primary-color-blue);
+    color: var(--primary-color-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border-color: var(--primary-color-blue);
+}
+
+#apply-btn {
+    color: #fff;
+    display: block;
+    height: auto;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+#apply-btn:hover {
+    color: var(--primary-color-dark);
+    border-color: var(--primary-color-blue);
+    background-color: var(--primary-color-blue);
+}
+
+#news-btn {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid var(--primary-color-blue);
+    background-color: var(--primary-color-blue);
+    text-transform: uppercase;
+    color: #fff;
+    height: 40px;
+    padding: 0 30px;
+    margin-left: -130px;
+    position: absolute;
+    transition: .5s;
+}
+
+#news-btn:hover {
+    background-color: #fff;
+    color: var(--primary-color-blue);
+}
+
+.btn-card-gradient {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    align-self: center;
+    text-align: center;
+    text-decoration: none;
+    background: var(--gradient-blue-f);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-card-gradient:hover {
+    background: var(--gradient-blue-s);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+#call-area #call-btn {
+    background-color: #fff;
+    color: var(--primary-color-blue);
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+    width: auto;
+    letter-spacing: 2px;
+}
+
+#contact-form .main-btn {
+    width: 120px;
+    height: 50px;
+}
+
+#contact-form .main-btn:hover {
+    color: var(--second-color-blue);
+}
+
+.btn-gradient {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--fifth-color-blue), var(--third-color-blue));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(95, 170, 255, 0.4);
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(95, 132, 255, 0.6);
+}
+
+.btn-gradient:active {
+    transform: translateY(0);
+}
+
+/* === NAV === */
+
+header,
+.navbar {
+    background-image: linear-gradient(to top, #303030, #000);
+}
+
+.navbar {
+    height: 60px;
+    /* altura fixa da navbar */
+    display: flex;
+    align-items: center;
+    /* centraliza verticalmente */
+}
+
+.navbar-custom {
+    background: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: #000;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    max-height: 100px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+    transition: .5s;
+}
+
+.navbar-nav {
+    margin-right: 30px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color-blue);
+    transition: .5s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    background: var(--gradient-blue-s);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.login {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+}
+
+.login:hover {
+    color: var(--primary-color-blue);
+    transition: .5s;
+}
+
+
+.navbar-expand-lg .navbar-nav .navlink {
+    padding: 1rem .8rem;
+}
+
+/* === SLIDER === */
+
+.container-fluid {
+    padding: 0;
+}
+
+.carousel-indicators[data-bs-target] {
+    background-color: #222;
+    opacity: 0.8;
+}
+
+#mainSlider .carousel-inner,
+#mainSlider .carousel-item {
+    height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+    top: 30%;
+}
+
+#mainSlider .carousel-caption h2 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: #fff;
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary-color-blue);
+}
+
+.sr-only {
+    display: none;
+}
+
+/* === SOBRE === */
+
+#about-area {
+    background-color: #f9f9f9;
+}
+
+.main-title {
+    color: #444;
+    position: relative;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: "";
+    border-top: 2px solid #333;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+#about-list i {
+    color: var(--primary-color-blue);
+    margin-right: 15px;
+}
+
+/* === SERVIÇOS === */
+
+.service-box {
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    transition: .3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box i,
+.service-box h4 {
+    transition: .5s;
+}
+
+.service-box i {
+    font-size: 36px;
+    margin-bottom: 26px;
+    color: #444;
+}
+
+.service-box h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-service:hover>i,
+.card-service:hover>h4 {
+    color: var(--primary-color-blue);
+}
+
+/* === TRABALHE CONOSCO === */
+
+#apply-area {
+    height: 500px;
+}
+
+#apply-area .container-fluid,
+#apply-area .row {
+    height: 100%;
+}
+
+#apply-area .apply-box {
+    text-align: center;
+    padding: 70px 50px;
+}
+
+#company-img {
+    background-image: url('../img/empresa.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+#pattern-img {
+    background-image: url('../img/pattern.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+#pattern-img h4,
+#pattern-img p {
+    color: #fff;
+}
+
+#pattern-img h4 {
+    margin-top: 8%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#pattern-img p {
+    margin-bottom: 20px;
+}
+
+/* === NEWS LETTER === */
+
+#news-area {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#news-area p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#id-email {
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid var(--primary-color-blue);
+    display: inline;
+    box-sizing: border-box;
+    width: 40%;
+    height: 40px;
+}
+
+/* === SOLUÇÕES === */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.184);
+    transition: all .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+
+
+/* === CALL TO ACTION === */
+
+#call-area {
+    background-color: var(--primary-color-blue);
+    text-transform: uppercase;
+}
+
+#call-area .container {
+    padding: 40px 100px;
+}
+
+#call-area .row {
+    display: block;
+    text-align: center;
+}
+
+#call-area p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    width: auto;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    display: inline;
+    height: 60px;
+    line-height: 60px;
+}
+
+/* === CONTACT === */
+
+#contact-area {
+    text-align: center;
+}
+
+.contact-box {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.contact-box i {
+    color: #444;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#msg-box p {
+    font-size: 22px;
+}
+
+.contact-box p {
+    font-size: 16px;
+}
+
+.contact-title {
+    font-weight: bold;
+    color: var(--second-color-blue);
+}
+
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+/* === FOOTER === */
+footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--primary-color-dark) !important; /* Remove qualquer background sólido */
+}
+
+#footer {
+    background: transparent !important; /* Remove o background branco que estava cobrindo as ondas */
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima das ondas */
+    padding: 40px 0 20px;
+}
+
+/* ONDAS ANIMADAS - CORRIGIDO */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Fica entre o footer e o conteúdo */
+    overflow: hidden;
+    pointer-events: none; /* Permite cliques no conteúdo */
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 120px; /* Altura aumentada para ser mais visível */
+    opacity: 0.8; /* Opacidade aumentada */
+}
+
+.wave-1 {
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(79, 172, 254, 0.6) 20%,
+            rgba(0, 242, 254, 0.6) 40%,
+            transparent 60%,
+            rgba(79, 172, 254, 0.6) 80%,
+            transparent 100%);
+    animation: waveMove 20s linear infinite;
+    height: 100px;
+}
+
+.wave-2 {
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(79, 172, 254, 0.4) 25%,
+            rgba(0, 242, 254, 0.4) 50%,
+            transparent 75%,
+            rgba(79, 172, 254, 0.4) 100%);
+    animation: waveMove 16s linear infinite reverse;
+    height: 80px;
+    bottom: 15px;
+}
+
+.wave-3 {
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(79, 172, 254, 0.3) 30%,
+            rgba(0, 242, 254, 0.3) 60%,
+            transparent 90%);
+    animation: waveMove 24s linear infinite;
+    height: 60px;
+    bottom: 30px;
+}
+
+@keyframes waveMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* === FOOTER TOP === */
+#footer-top {
+    color: #fff;
+    margin-bottom: 2em;
+}
+
+#logomarca {
+    max-height: 70px;
+    width: auto;
+    transform: scale(3.0);
+    margin-left: auto;
+}
+
+.footer-p-news {
+    color: var(--second-color-gray);
+    text-align: center;
+}
+
+/* === FOOTER DETAILS === */
+#footer-details {
+    margin-bottom: 3em;
+}
+
+#footer-details h4 {
+    color: #fff;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+#news-container {
+    padding-right: 2em;
+}
+
+#links-container {
+    padding: 0 2em;
+    text-align: center;
+    border-left: 1px solid var(--second-color-gray);
+    border-right: 1px solid var(--second-color-gray);
+}
+
+/* INPUT ANIMADO */
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box .input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box .input:focus {
+    border-color: var(--fourth-color-blue);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(95, 132, 255, 0.6);
+}
+
+.input-box .label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 16px;
+    display: flex;
+    transition: 0.2s ease all;
+}
+
+.input-box .char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.input-box .input:focus~.label .char,
+.input-box .input:valid~.label .char {
+    transform: translateY(-22px);
+    font-size: 14px;
+    color: var(--primary-color-blue);
+    background: rgba(30, 30, 46, 0.9);
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+/* MENU SOCIAL */
+.menu {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.menu .toggle {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    background: var(--gradient-blue-f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 1.25s;
+    z-index: 5;
+}
+
+.menu.active .toggle {
+    transform: rotate(360deg);
+    background: var(--gradient-blue-s);
+}
+
+.menu li {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--i));
+    transform: rotate(0deg) translateX(110px);
+    transform-origin: 140px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background: var(--clr);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    transition: 0.3s;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.menu li a:hover {
+    transform: rotate(calc(360deg / -8 * var(--i))) scale(1.15);
+}
+
+/* LINKS */
+#links-container li {
+    margin-bottom: 0.5em;
+}
+
+.link-footer {
+    color: var(--primary-color-gray);
+    text-decoration: none;
+    text-align: center;
+}
+
+.link-footer:hover {
+    color: #fff;
+    transition: .5s;
+}
+
+/* === FOOTER BOTTOM === */
+#footer-bottom {
+    border-top: 1px solid var(--second-color-gray);
+    padding-top: 2em;
+}
+
+#footer-bottom p,
+#footer-bottom a {
+    color: var(--primary-color-blue);
+}
+
+#footer-bottom a:hover {
+    color: var(--fourth-color-blue);
+}
+    </code>
+</pre>
+</div>
+<div class="code-container">
+  <button class="copy-btn" data-target="codigo-js">Copiar</button>
+<pre>
+  <code class="language-javascript" id="codigo-js">
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 1000, // duração da animação em ms
+    once: false // anima apenas uma vez ao rolar
+  });
+});
+
+document.querySelectorAll('div a.nav-item').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Impede o comportamento padrão do link
+
+    const targetId = this.getAttribute('href').substring(1); // Remove o '#' do href
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      // Define a quantidade de pixels para subir (ajuste conforme necessário)
+      const offset = 55; // Por exemplo, sobe 30 pixels
+
+      const targetPosition = targetElement.offsetTop - offset;
+
+      window.scrollTo({
+        top: targetPosition > 0 ? targetPosition : 0, // Garante que não role para um valor negativo
+        behavior: 'smooth' // Adiciona o scroll suave
+      });
+    }
+  });
+});
+
+function handleNavbarBackground() {
+  const navbar = document.querySelector('.navbar');
+  const isDesktop = window.innerWidth > 768;
+
+  if (isDesktop && window.scrollY > 10) {
+    navbar.classList.add('navbar-scrolled');
+  } else if (isDesktop && window.scrollY <= 10) {
+    navbar.classList.remove('navbar-scrolled');
+  } else {
+    // Em telas pequenas, sempre usa a navbar com fundo
+    navbar.classList.add('navbar-scrolled');
+  }
+}
+
+// Verifica quando rola a página
+window.addEventListener('scroll', handleNavbarBackground);
+
+// Verifica quando a janela é redimensionada (por exemplo, virar o celular ou redimensionar o navegador)
+window.addEventListener('resize', handleNavbarBackground);
+
+// Verifica logo ao carregar a página
+window.addEventListener('load', handleNavbarBackground);
+
+// interação para mostrar o efeito
+document.addEventListener('DOMContentLoaded', function () {
+  const inputs = document.querySelectorAll('.input');
+
+  inputs.forEach(input => {
+    input.addEventListener('focus', function () {
+      this.parentElement.classList.add('focused');
+    });
+
+    input.addEventListener('blur', function () {
+      if (!this.value) {
+        this.parentElement.classList.remove('focused');
+      }
+    });
+  });
+});
+
+const toggle = document.querySelector('.toggle');
+const menu = document.querySelector('.menu');
+
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+const menuLinks = document.querySelectorAll('.menu li a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Adicione aqui a lógica de compartilhamento
+    // Por enquanto, apenas fecha o menu
+    menu.classList.remove('active');
+  });
+});
+    </code></pre>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="../assets/js/code.js"></script>
+</body>
+</html>

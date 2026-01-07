@@ -31,11 +31,11 @@ const projects = [
     },
     {
         id: 3,
-        title: "Presente Romântico",
+        title: "Presente Aniversário",
         category: "Code Gift",
-        description: "Aplicação romântica e interativa criada como presente personalizado.",
-        fullDescription: "Aplicação especial criada como um presente interativo e romântico, com efeitos visuais, música, animações e interface personalizada. Um projeto criativo que combina tecnologia com emoção, demonstrando domínio em JavaScript e experiências imersivas.",
-        image: "assets/img/gift-for-gf.png",
+        description: "Aplicação interativa criada como presente personalizado.",
+        fullDescription: "Aplicação especial criada como um presente interativo, com efeitos visuais, animações e interface personalizada. Um projeto criativo que combina tecnologia com emoção, demonstrando domínio em JavaScript e experiências imersivas.",
+        image: "assets/img/gift-birthday.png",
         tags: ["HTML5", "CSS3", "Aplicação Criativa", "Projeto Pessoal", "Romântico", "Animações", "JavaScript"],
         demoLink: "./demo/demo03.html",
         codeLink: "./codes/code03.html"

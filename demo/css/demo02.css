@@ -530,13 +530,16 @@ header,
 footer {
     position: relative;
     overflow: hidden;
-    background: var(--primary-color-dark) !important; /* Remove qualquer background sólido */
+    background: var(--primary-color-dark) !important;
+    /* Remove qualquer background sólido */
 }
 
 #footer {
-    background: transparent !important; /* Remove o background branco que estava cobrindo as ondas */
+    background: transparent !important;
+    /* Remove o background branco que estava cobrindo as ondas */
     position: relative;
-    z-index: 2; /* Garante que o conteúdo fique acima das ondas */
+    z-index: 2;
+    /* Garante que o conteúdo fique acima das ondas */
     padding: 40px 0 20px;
 }
 
@@ -547,9 +550,11 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Fica entre o footer e o conteúdo */
+    z-index: 1;
+    /* Fica entre o footer e o conteúdo */
     overflow: hidden;
-    pointer-events: none; /* Permite cliques no conteúdo */
+    pointer-events: none;
+    /* Permite cliques no conteúdo */
 }
 
 .waves {
@@ -565,8 +570,10 @@ footer {
     bottom: 0;
     left: 0;
     width: 200%;
-    height: 120px; /* Altura aumentada para ser mais visível */
-    opacity: 0.8; /* Opacidade aumentada */
+    height: 120px;
+    /* Altura aumentada para ser mais visível */
+    opacity: 0.8;
+    /* Opacidade aumentada */
 }
 
 .wave-1 {
@@ -608,6 +615,7 @@ footer {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -802,4 +810,84 @@ footer {
 
 #footer-bottom a:hover {
     color: var(--fourth-color-blue);
+}
+
+@media (max-width: 991px) {
+
+    .navbar {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    /* Fundo sólido no menu aberto */
+    .navbar-collapse {
+        background-color: #000;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    /* Empurra o conteúdo pra não ficar atrás da navbar */
+    body {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #mainSlider .carousel-inner,
+    #mainSlider .carousel-item {
+        height: auto !important;
+        min-height: 420px;
+    }
+
+    #mainSlider img {
+        height: 420px;
+        object-fit: cover;
+    }
+
+    #mainSlider .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    #mainSlider img {
+        height: 380px;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 22px;
+    }
+
+    #mainSlider .carousel-caption p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .main-btn {
+        width: auto;
+        padding: 10px 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+
+    #mainSlider img {
+        height: 340px;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 20px;
+    }
 }

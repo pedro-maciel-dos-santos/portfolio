@@ -15,45 +15,403 @@
   <code class="language-html" id="codigo-html">
 
     &lt;!DOCTYPE html&gt;
-&lt;html lang="pt-br"&gt;
+&lt;html lang="pt-BR"&gt;
 &lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Presente Aniversário&lt;/title&gt;
-
-  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"&gt;
-
-  &lt;link rel="stylesheet" href="css/demo03.css"&gt;
-  &lt;link rel="stylesheet" href="css/demo03Responsive.css"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Sabor &amp; Arte - Restaurante&lt;/title&gt;
+    
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    
+    &lt;!-- Font Awesome --&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+    
+    &lt;!-- Google Fonts --&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"&gt;
+    
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
+     &lt;nav class="navbar navbar-expand-lg navbar-dark fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="#home"&gt;
+                &lt;i class="fas fa-utensils"&gt;&lt;/i&gt; Sabor &amp; Arte
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#home"&gt;Início&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#menu"&gt;Cardápio&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#pricing"&gt;Valores&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#booking"&gt;Agendamento&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#contact"&gt;Contato&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;section id="home" class="hero"&gt;
+        &lt;div class="hero-content"&gt;
+            &lt;h1&gt;Sabor &amp; Arte&lt;/h1&gt;
+            &lt;p&gt;Experiência gastronômica única e inesquecível&lt;/p&gt;
+            &lt;a href="#booking" class="btn-primary-custom"&gt;Faça sua Reserva&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;section id="menu" style="background-color: var(--light-bg);"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="section-title"&gt;Nosso Cardápio&lt;/h2&gt;
+            &lt;p class="section-subtitle"&gt;Pratos preparados com ingredientes frescos e selecionados&lt;/p&gt;
+            
+            &lt;div class="row"&gt;
+                &lt;!-- Entradas --&gt;
+                &lt;div class="col-md-6"&gt;
+                    &lt;div class="menu-card"&gt;
+                        &lt;div class="text-center"&gt;
+                            &lt;i class="fas fa-leaf menu-icon"&gt;&lt;/i&gt;
+                            &lt;h3&gt;Entradas&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Bruschetta Italiana&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Tomate fresco, manjericão e azeite extra virgem&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 28&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Carpaccio de Salmão&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Salmão fresco com alcaparras e molho especial&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 45&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Salada Caesar&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Alface romana, croutons e parmesão&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 32&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-  &lt;div class="message-box" id="messageBox"&gt;
-  &lt;div class="code-line"&gt;&lt;span class="comment"&gt;// Feliz Aniversário! ✨&lt;/span&gt;&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&lt;/div&gt;
-  &lt;div class="code-line"&gt;&lt;span class="keyword"&gt;const&lt;/span&gt; &lt;span class="variable"&gt;fulano&lt;/span&gt; = {&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&nbsp;para: &lt;span class="string"&gt;'você'&lt;/span&gt;,&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&nbsp;data: &lt;span class="string"&gt;'00-00-0000'&lt;/span&gt;,&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&nbsp;duração: &lt;span class="string"&gt;'para sempre'&lt;/span&gt;,&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&nbsp;mensagem: &lt;span class="string"&gt;'Vim desejar um Feliz Aniversário para você, que continue sendo essa pessoa incrível, engraçada e incrível.'&lt;/span&gt;&lt;/div&gt;
-  &lt;div class="code-line"&gt;};&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&lt;/div&gt;
-  &lt;div class="code-line"&gt;&lt;span class="function"&gt;console&lt;/span&gt;.&lt;span class="function"&gt;log&lt;/span&gt;(&lt;span
-      class="string"&gt;'Parabéns ❤️'&lt;/span&gt;);&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&lt;/div&gt;
-  &lt;div class="code-line"&gt;&lt;span class="keyword"&gt;while&lt;/span&gt;(&lt;span class="keyword"&gt;true&lt;/span&gt;) {&lt;/div&gt;
-  &lt;div class="code-line"&gt;&nbsp;&nbsp;&lt;span class="function"&gt;teVerFeliz&lt;/span&gt;();&lt;/div&gt;
-  &lt;div class="code-line"&gt;}&lt;/div&gt;
+                &lt;!-- Pratos Principais --&gt;
+                &lt;div class="col-md-6"&gt;
+                    &lt;div class="menu-card"&gt;
+                        &lt;div class="text-center"&gt;
+                            &lt;i class="fas fa-drumstick-bite menu-icon"&gt;&lt;/i&gt;
+                            &lt;h3&gt;Pratos Principais&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Filé Mignon ao Molho Madeira&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;300g, acompanha arroz e legumes&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 89&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Salmão Grelhado&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Com risoto de limão siciliano&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 78&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Massa à Carbonara&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Receita tradicional italiana&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 65&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-  &lt;div class="instruction"&gt;Toque novamente para fechar&lt;/div&gt;
-&lt;/div&gt;
+                &lt;!-- Sobremesas --&gt;
+                &lt;div class="col-md-6"&gt;
+                    &lt;div class="menu-card"&gt;
+                        &lt;div class="text-center"&gt;
+                            &lt;i class="fas fa-ice-cream menu-icon"&gt;&lt;/i&gt;
+                            &lt;h3&gt;Sobremesas&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Petit Gâteau&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Com sorvete de creme&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 28&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Tiramisù&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Clássico italiano&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 25&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Cheesecake de Frutas Vermelhas&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Com calda especial&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 30&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Bebidas --&gt;
+                &lt;div class="col-md-6"&gt;
+                    &lt;div class="menu-card"&gt;
+                        &lt;div class="text-center"&gt;
+                            &lt;i class="fas fa-wine-glass menu-icon"&gt;&lt;/i&gt;
+                            &lt;h3&gt;Bebidas&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Vinho Tinto Reserva&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Taça / Garrafa&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 25 / R$ 120&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Drinks Especiais&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Mojito, Caipirinha Premium, Gin Tônica&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 32&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="menu-item"&gt;
+                            &lt;div&gt;
+                                &lt;div class="menu-item-name"&gt;Sucos Naturais&lt;/div&gt;
+                                &lt;div class="menu-item-desc"&gt;Laranja, limão, morango&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="menu-item-price"&gt;R$ 15&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id="pricing"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="section-title"&gt;Nossos Pacotes&lt;/h2&gt;
+            &lt;p class="section-subtitle"&gt;Escolha o pacote ideal para sua ocasião especial&lt;/p&gt;
+            
+            &lt;div class="row g-4"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="pricing-card"&gt;
+                        &lt;i class="fas fa-star" style="font-size: 2.5rem; color: var(--primary-color);"&gt;&lt;/i&gt;
+                        &lt;h3 class="mt-3"&gt;Básico&lt;/h3&gt;
+                        &lt;div class="price"&gt;R$ 120&lt;/div&gt;
+                        &lt;p&gt;Por pessoa&lt;/p&gt;
+                        &lt;ul class="pricing-features"&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Entrada&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Prato Principal&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Bebida não-alcoólica&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Atendimento padrão&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a href="#booking" class="btn-primary-custom"&gt;Agendar&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="pricing-card featured"&gt;
+                        &lt;i class="fas fa-crown" style="font-size: 2.5rem;"&gt;&lt;/i&gt;
+                        &lt;h3 class="mt-3"&gt;Premium&lt;/h3&gt;
+                        &lt;div class="price"&gt;R$ 200&lt;/div&gt;
+                        &lt;p&gt;Por pessoa&lt;/p&gt;
+                        &lt;ul class="pricing-features"&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Entrada Premium&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Prato Principal Especial&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Sobremesa&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Drink ou Vinho&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Mesa reservada&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a href="#booking" class="btn-primary-custom" style="background-color: white; color: var(--primary-color);"&gt;Agendar&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="pricing-card"&gt;
+                        &lt;i class="fas fa-gem" style="font-size: 2.5rem; color: var(--primary-color);"&gt;&lt;/i&gt;
+                        &lt;h3 class="mt-3"&gt;VIP&lt;/h3&gt;
+                        &lt;div class="price"&gt;R$ 350&lt;/div&gt;
+                        &lt;p&gt;Por pessoa&lt;/p&gt;
+                        &lt;ul class="pricing-features"&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Menu degustação completo&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Harmonização com vinhos&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Área privativa&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Chef exclusivo&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt; Atendimento personalizado&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a href="#booking" class="btn-primary-custom"&gt;Agendar&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;section id="booking" style="background-color: var(--light-bg);"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="section-title"&gt;Faça sua Reserva&lt;/h2&gt;
+            &lt;p class="section-subtitle"&gt;Reserve sua mesa e garanta uma experiência memorável&lt;/p&gt;
+            
+            &lt;div class="row justify-content-center"&gt;
+                &lt;div class="col-md-8"&gt;
+                    &lt;div class="booking-form"&gt;
+                        &lt;form id="bookingForm"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-md-6"&gt;
+                                    &lt;label class="form-label"&gt;Nome Completo *&lt;/label&gt;
+                                    &lt;input type="text" class="form-control" id="name" required&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-md-6"&gt;
+                                    &lt;label class="form-label"&gt;E-mail *&lt;/label&gt;
+                                    &lt;input type="email" class="form-control" id="email" required&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-md-6"&gt;
+                                    &lt;label class="form-label"&gt;Telefone *&lt;/label&gt;
+                                    &lt;input type="tel" class="form-control" id="phone" required&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-md-6"&gt;
+                                    &lt;label class="form-label"&gt;Número de Pessoas *&lt;/label&gt;
+                                    &lt;select class="form-select" id="guests" required&gt;
+                                        &lt;option value=""&gt;Selecione&lt;/option&gt;
+                                        &lt;option value="1"&gt;1 pessoa&lt;/option&gt;
+                                        &lt;option value="2"&gt;2 pessoas&lt;/option&gt;
+                                        &lt;option value="3"&gt;3 pessoas&lt;/option&gt;
+                                        &lt;option value="4"&gt;4 pessoas&lt;/option&gt;
+                                        &lt;option value="5"&gt;5 pessoas&lt;/option&gt;
+                                        &lt;option value="6+"&gt;6+ pessoas&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-md-6"&gt;
+                                    &lt;label class="form-label"&gt;Data *&lt;/label&gt;
+                                    &lt;input type="date" class="form-control" id="date" required&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-md-6"&gt;
+                                    &lt;label class="form-label"&gt;Horário *&lt;/label&gt;
+                                    &lt;select class="form-select" id="time" required&gt;
+                                        &lt;option value=""&gt;Selecione&lt;/option&gt;
+                                        &lt;option value="12:00"&gt;12:00&lt;/option&gt;
+                                        &lt;option value="12:30"&gt;12:30&lt;/option&gt;
+                                        &lt;option value="13:00"&gt;13:00&lt;/option&gt;
+                                        &lt;option value="13:30"&gt;13:30&lt;/option&gt;
+                                        &lt;option value="19:00"&gt;19:00&lt;/option&gt;
+                                        &lt;option value="19:30"&gt;19:30&lt;/option&gt;
+                                        &lt;option value="20:00"&gt;20:00&lt;/option&gt;
+                                        &lt;option value="20:30"&gt;20:30&lt;/option&gt;
+                                        &lt;option value="21:00"&gt;21:00&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="mb-3"&gt;
+                                &lt;label class="form-label"&gt;Pacote&lt;/label&gt;
+                                &lt;select class="form-select" id="package"&gt;
+                                    &lt;option value=""&gt;Nenhum (à la carte)&lt;/option&gt;
+                                    &lt;option value="basico"&gt;Básico - R$ 120&lt;/option&gt;
+                                    &lt;option value="premium"&gt;Premium - R$ 200&lt;/option&gt;
+                                    &lt;option value="vip"&gt;VIP - R$ 350&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="mb-3"&gt;
+                                &lt;label class="form-label"&gt;Observações&lt;/label&gt;
+                                &lt;textarea class="form-control" id="notes" rows="3" placeholder="Alergias, preferências, ocasião especial..."&gt;&lt;/textarea&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="text-center"&gt;
+                                &lt;button type="submit" class="btn-primary-custom"&gt;
+                                    &lt;i class="fas fa-calendar-check me-2"&gt;&lt;/i&gt;Confirmar Reserva
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                        
+                        &lt;div id="successMessage" class="alert alert-success-custom mt-4" style="display: none;"&gt;
+                            &lt;i class="fas fa-check-circle me-2"&gt;&lt;/i&gt;
+                            &lt;strong&gt;Reserva confirmada!&lt;/strong&gt; Enviamos os detalhes para seu e-mail.
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;section id="contact"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="section-title"&gt;Entre em Contato&lt;/h2&gt;
+            &lt;p class="section-subtitle"&gt;Estamos à disposição para atendê-lo&lt;/p&gt;
+            
+            &lt;div class="row text-center"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--primary-color);"&gt;&lt;/i&gt;
+                    &lt;h4 class="mt-3"&gt;Endereço&lt;/h4&gt;
+                    &lt;p&gt;Rua Gourmet, 123&lt;br&gt;Centro - São Paulo/SP&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;i class="fas fa-phone" style="font-size: 3rem; color: var(--primary-color);"&gt;&lt;/i&gt;
+                    &lt;h4 class="mt-3"&gt;Telefone&lt;/h4&gt;
+                    &lt;p&gt;(11) 3456-7890&lt;br&gt;(11) 98765-4321&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;i class="fas fa-clock" style="font-size: 3rem; color: var(--primary-color);"&gt;&lt;/i&gt;
+                    &lt;h4 class="mt-3"&gt;Horário&lt;/h4&gt;
+                    &lt;p&gt;Ter a Dom: 12h às 15h&lt;br&gt;19h às 23h&lt;br&gt;Segunda: Fechado&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;footer&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-4 mb-4"&gt;
+                    &lt;h4 style="color: var(--primary-color);"&gt;Sabor &amp; Arte&lt;/h4&gt;
+                    &lt;p&gt;Experiência gastronômica única desde 2020. Proporcionando momentos inesquecíveis através da alta gastronomia.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 mb-4"&gt;
+                    &lt;h5&gt;Links Rápidos&lt;/h5&gt;
+                    &lt;div class="footer-links"&gt;
+                        &lt;a href="#menu" class="d-block mb-2"&gt;Cardápio&lt;/a&gt;
+                        &lt;a href="#pricing" class="d-block mb-2"&gt;Valores&lt;/a&gt;
+                        &lt;a href="#booking" class="d-block mb-2"&gt;Reservas&lt;/a&gt;
+                        &lt;a href="#contact" class="d-block"&gt;Contato&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 mb-4"&gt;
+                    &lt;h5&gt;Redes Sociais&lt;/h5&gt;
+                    &lt;div class="social-icons"&gt;
+                        &lt;a href="#"&gt;&lt;i class="fab fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="#"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="#"&gt;&lt;i class="fa-brands fa-whatsapp"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="#"&gt;&lt;i class="fab fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr style="border-color: #555;"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;p&gt;&amp;copy; 0000 Sabor &amp; Arte. Todos os direitos reservados.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"&gt;&lt;/script&gt;
   &lt;script src="js/demo03.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-
 &lt;/html&gt;
   </code>
 </pre>
@@ -65,189 +423,320 @@
   <code class="language-css" id="codigo-css">
  @charset "UTF-8";
 
+:root {
+    --primary-color: #d4a574;
+    --secondary-color: #2c2c2c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Courier New', monospace;
-  background: #0a0a0a;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
-.container {
-  text-align: center;
-  position: relative;
-  width: 100%;
-  max-width: 800px;
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
 }
 
-.heart-container {
-  cursor: pointer;
-  transition: all 0.6s ease;
-  display: inline-block;
+/* Navbar */
+.navbar {
+    background-color: rgba(44, 44, 44, 0.95) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.heart-container.hidden {
-  opacity: 0;
-  transform: scale(0.5);
-  pointer-events: none;
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color) !important;
 }
 
-.heart {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  animation: heartbeat 1.5s ease-in-out infinite;
+.nav-link {
+    color: #fff !important;
+    margin: 0 1rem;
+    transition: color 0.3s;
+    font-weight: 500;
 }
 
-@keyframes heartbeat {
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
 
-  0%,
-  100% {
-    transform: scale(1);
-  }
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4a574" width="1200" height="600"/><path fill="%23c49563" d="M0 300L50 283.3C100 266.7 200 233.3 300 233.3C400 233.3 500 266.7 600 283.3C700 300 800 300 900 283.3C1000 266.7 1100 233.3 1150 216.7L1200 200V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V300Z"/></svg>');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
 
-  25% {
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary-custom:hover {
+    background-color: #c49563;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(212, 165, 116, 0.4);
+}
+
+/* Section Styling */
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Menu Cards */
+.menu-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.menu-item-desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.menu-item-price {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Pricing Section */
+.pricing-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+    background: linear-gradient(135deg, var(--primary-color), #c49563);
+    color: white;
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
     transform: scale(1.1);
-  }
-
-  50% {
-    transform: scale(1);
-  }
 }
 
-.heart svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.5));
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
 }
 
-.heart-label {
-  margin-top: 20px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 3px;
+.pricing-features {
+    list-style: none;
+    margin: 2rem 0;
 }
 
-.message-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  background: #1a1a1a;
-  border: 2px solid #667eea;
-  border-radius: 16px;
-  padding: 40px;
-  height: 95vh;
-  width: 90%;
-  max-width: 550px;
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  cursor: pointer;
+.pricing-features li {
+    padding: 0.5rem 0;
 }
 
-.message-box.visible {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+.pricing-features i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
 }
 
-.message-box:hover {
-  border-color: #764ba2;
-  box-shadow: 0 20px 70px rgba(118, 75, 162, 0.5);
+.pricing-card.featured .pricing-features i {
+    color: white;
 }
 
-.code-line {
-  color: #fff;
-  text-align: left;
-  margin: 10px 0;
-  font-size: 16px;
-  line-height: 1.8;
+/* Booking Form */
+.booking-form {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.keyword {
-  color: #c792ea;
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    margin-bottom: 1rem;
 }
 
-.function {
-  color: #82aaff;
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(212, 165, 116, 0.25);
 }
 
-.string {
-  color: #f07178;
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 0 1rem;
 }
 
-.comment {
-  color: #697098;
-  font-style: italic;
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.variable {
-  color: #89ddff;
+.footer-links a:hover {
+    color: var(--primary-color);
 }
 
-.instruction {
-  color: #697098;
-  font-size: 14px;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #2a2a2a;
-  text-align: center;
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
 }
 
-.sparkle {
-  position: fixed;
-  width: 6px;
-  height: 6px;
-  background: #667eea;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: sparkleFloat 1.5s ease-out forwards;
-  box-shadow: 0 0 10px #667eea;
+.social-icons a:hover {
+    color: var(--primary-color);
 }
 
-@keyframes sparkleFloat {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
 
-  100% {
-    transform: translate(var(--tx), var(--ty)) scale(0);
-    opacity: 0;
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alert Styling */
+.alert-success-custom {
+    background-color: #d4f4dd;
+    border-color: #b8e6c5;
+    color: #2d5f3c;
+    border-radius: 10px;
 }
 
 @charset "UTF-8";
 
 @media (max-width: 768px) {
-  .heart {
-    width: 150px;
-    height: 150px;
-  }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 
-  .message-box {
-    padding: 30px 25px;
-  }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
 
-  .code-line {
-    font-size: 14px;
-  }
-
-  .heart-label {
-    font-size: 16px;
-  }
+    .section-title {
+        font-size: 2rem;
+    }
 }
+
   </code>
 </pre>
 </div>
@@ -255,85 +744,82 @@ body {
   <button class="copy-btn" data-target="codigo-js">Copiar</button>
 <pre>
   <code class="language-javascript" id="codigo-js">
- const heartContainer = document.getElementById('heartContainer');
-const messageBox = document.getElementById('messageBox');
-let isOpen = false;
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            }
+        }
+    });
+});
 
-function toggle(e) {
-  e.stopPropagation();
-  isOpen = !isOpen;
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(44, 44, 44, 1)';
+    } else {
+        navbar.style.backgroundColor = 'rgba(44, 44, 44, 0.95)';
+    }
+});
 
-  if (isOpen) {
-    heartContainer.classList.add('hidden');
-    setTimeout(() => {
-      messageBox.classList.add('visible');
-    }, 300);
-  } else {
-    messageBox.classList.remove('visible');
-    setTimeout(() => {
-      heartContainer.classList.remove('hidden');
-    }, 600);
-  }
+const dateInput = document.getElementById('date');
+const today = new Date().toISOString().split('T')[0];
+dateInput.setAttribute('min', today);
 
-  createSparkles(e.clientX, e.clientY);
-}
+document.getElementById('bookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-heartContainer.addEventListener('click', toggle);
-messageBox.addEventListener('click', toggle);
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        guests: document.getElementById('guests').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        package: document.getElementById('package').value,
+        notes: document.getElementById('notes').value
+    };
 
-function createSparkles(x, y) {
-  for (let i = 0; i < 15; i++) {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.left = x + 'px';
-    sparkle.style.top = y + 'px';
+    document.getElementById('successMessage').style.display = 'block';
 
-    const angle = (Math.PI * 2 * i) / 15;
-    const distance = 60 + Math.random() * 40;
-    const tx = Math.cos(angle) * distance;
-    const ty = Math.sin(angle) * distance;
+    this.reset();
 
-    sparkle.style.setProperty('--tx', tx + 'px');
-    sparkle.style.setProperty('--ty', ty + 'px');
+    setTimeout(function () {
+        document.getElementById('successMessage').style.display = 'none';
+    }, 5000);
 
-    document.body.appendChild(sparkle);
+    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
 
-    setTimeout(() => {
-      sparkle.remove();
-    }, 1500);
-  }
-}
+    console.log('Booking data:', formData);
+});
 
-// Efeito de rastro do cursor
-let lastTime = 0;
-document.addEventListener('mousemove', function (e) {
-  const now = Date.now();
-  if (now - lastTime < 50) return;
-  lastTime = now;
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-  const trail = document.createElement('div');
-  trail.style.position = 'fixed';
-  trail.style.width = '3px';
-  trail.style.height = '3px';
-  trail.style.background = '#667eea';
-  trail.style.borderRadius = '50%';
-  trail.style.left = e.clientX + 'px';
-  trail.style.top = e.clientY + 'px';
-  trail.style.pointerEvents = 'none';
-  trail.style.opacity = '0.5';
-  trail.style.transition = 'all 0.8s ease-out';
-  trail.style.zIndex = '999';
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
 
-  document.body.appendChild(trail);
-
-  setTimeout(() => {
-    trail.style.opacity = '0';
-    trail.style.transform = 'scale(4)';
-  }, 10);
-
-  setTimeout(() => {
-    trail.remove();
-  }, 800);
+document.querySelectorAll('.menu-card, .pricing-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'all 0.6s ease-out';
+    observer.observe(card);
 });
   </code></pre>
 </div>

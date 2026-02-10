@@ -20,23 +20,23 @@ const projects = [
     },
     {
         id: 2,
-        title: "Website Completo",
+        title: "Website Developer",
         category: "Website",
-        description: "Website completo e responsivo com foco em design e navegação fluida.",
-        fullDescription: "Website totalmente desenvolvido do zero, com estrutura responsiva, layout moderno e foco na experiência do usuário. Inclui seções de serviços, navegação fluida, visual limpo e técnicas de responsividade para diferentes dispositivos. Demonstra domínio em front-end e boas práticas de desenvolvimento web.",
+        description: "Website profissional focado em manutenção de sites, suporte técnico contínuo e desenvolvimento web sob medida.",
+        fullDescription: "Website desenvolvido com foco em serviços de manutenção de sites e desenvolvimento web profissional. Apresenta claramente soluções como correções técnicas, atualizações, otimização de performance, segurança, criação de novos sites e melhorias contínuas. O layout é moderno, responsivo e orientado à conversão, com navegação intuitiva, chamadas estratégicas para contato e foco em credibilidade, suporte e confiabilidade. Ideal para demonstrar expertise técnica, organização de serviços e relacionamento com clientes.",
         image: "assets/img/site-dv.png",
-        tags: ["HTML5", "CSS3", "JavaScript", "Desenvolvimento Web", "UI/UX", "Layout Profissional", "Responsividade"],
+        tags: ["HTML5", "CSS3", "JavaScript", "Desenvolvimento Web", "UI/UX", "Projeto Pessoal", "Responsividade"],
         demoLink: "./demo/demo02.html",
         codeLink: "./codes/code02.html"
     },
     {
         id: 3,
-        title: "Presente Aniversário",
-        category: "Code Gift",
-        description: "Aplicação interativa criada como presente personalizado.",
-        fullDescription: "Aplicação especial criada como um presente interativo, com efeitos visuais, animações e interface personalizada. Um projeto criativo que combina tecnologia com emoção, demonstrando domínio em JavaScript e experiências imersivas.",
-        image: "assets/img/gift-birthday.png",
-        tags: ["HTML5", "CSS3", "Aplicação Criativa", "Projeto Pessoal", "Romântico", "Animações", "JavaScript"],
+        title: "Website Restaurante",
+        category: "Website",
+        description: "Website institucional para restaurante, com visual atrativo, cardápio organizado e foco na experiência do cliente.",
+        fullDescription: "Website desenvolvido para restaurante, com design visualmente atrativo e identidade alinhada à proposta gastronômica do negócio. Possui layout responsivo, navegação simples e foco na apresentação do cardápio, ambiente, localização e formas de contato. O projeto valoriza imagens, tipografia elegante e organização das informações para facilitar reservas e visitas presenciais. Ideal para fortalecer a presença digital do restaurante e proporcionar uma experiência agradável ao cliente antes mesmo da visita.",
+        image: "assets/img/site-saborearte.png",
+        tags: ["HTML5", "CSS3", "Aplicação Criativa", "Layout Profissional", "UI/UX", "Desenvolvimento Web", "JavaScript"],
         demoLink: "./demo/demo03.html",
         codeLink: "./codes/code03.html"
     }

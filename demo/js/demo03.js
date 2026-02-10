@@ -1,80 +1,90 @@
-const heartContainer = document.getElementById('heartContainer');
-const messageBox = document.getElementById('messageBox');
-let isOpen = false;
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            // Close mobile menu if open
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            }
+        }
+    });
+});
 
-function toggle(e) {
-  e.stopPropagation();
-  isOpen = !isOpen;
+// Change navbar background on scroll
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(44, 44, 44, 1)';
+    } else {
+        navbar.style.backgroundColor = 'rgba(44, 44, 44, 0.95)';
+    }
+});
 
-  if (isOpen) {
-    heartContainer.classList.add('hidden');
-    setTimeout(() => {
-      messageBox.classList.add('visible');
-    }, 300);
-  } else {
-    messageBox.classList.remove('visible');
-    setTimeout(() => {
-      heartContainer.classList.remove('hidden');
-    }, 600);
-  }
+// Set minimum date for booking
+const dateInput = document.getElementById('date');
+const today = new Date().toISOString().split('T')[0];
+dateInput.setAttribute('min', today);
 
-  createSparkles(e.clientX, e.clientY);
-}
+// Form submission
+document.getElementById('bookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-heartContainer.addEventListener('click', toggle);
-messageBox.addEventListener('click', toggle);
+    // Get form values
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        guests: document.getElementById('guests').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        package: document.getElementById('package').value,
+        notes: document.getElementById('notes').value
+    };
 
-function createSparkles(x, y) {
-  for (let i = 0; i < 15; i++) {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.left = x + 'px';
-    sparkle.style.top = y + 'px';
+    // Show success message
+    document.getElementById('successMessage').style.display = 'block';
 
-    const angle = (Math.PI * 2 * i) / 15;
-    const distance = 60 + Math.random() * 40;
-    const tx = Math.cos(angle) * distance;
-    const ty = Math.sin(angle) * distance;
+    // Reset form
+    this.reset();
 
-    sparkle.style.setProperty('--tx', tx + 'px');
-    sparkle.style.setProperty('--ty', ty + 'px');
+    // Hide success message after 5 seconds
+    setTimeout(function () {
+        document.getElementById('successMessage').style.display = 'none';
+    }, 5000);
 
-    document.body.appendChild(sparkle);
+    // Scroll to success message
+    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
 
-    setTimeout(() => {
-      sparkle.remove();
-    }, 1500);
-  }
-}
+    // In a real application, you would send this data to a server
+    console.log('Booking data:', formData);
+});
 
-// Efeito de rastro do cursor
-let lastTime = 0;
-document.addEventListener('mousemove', function (e) {
-  const now = Date.now();
-  if (now - lastTime < 50) return;
-  lastTime = now;
+// Add animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-  const trail = document.createElement('div');
-  trail.style.position = 'fixed';
-  trail.style.width = '3px';
-  trail.style.height = '3px';
-  trail.style.background = '#667eea';
-  trail.style.borderRadius = '50%';
-  trail.style.left = e.clientX + 'px';
-  trail.style.top = e.clientY + 'px';
-  trail.style.pointerEvents = 'none';
-  trail.style.opacity = '0.5';
-  trail.style.transition = 'all 0.8s ease-out';
-  trail.style.zIndex = '999';
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
 
-  document.body.appendChild(trail);
-
-  setTimeout(() => {
-    trail.style.opacity = '0';
-    trail.style.transform = 'scale(4)';
-  }, 10);
-
-  setTimeout(() => {
-    trail.remove();
-  }, 800);
+// Observe all menu cards and pricing cards
+document.querySelectorAll('.menu-card, .pricing-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'all 0.6s ease-out';
+    observer.observe(card);
 });
